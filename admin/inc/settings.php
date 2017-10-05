@@ -127,6 +127,6 @@ define("TITLE", "Home Page");
 <div class="container">
 		&copy; Marcel Kolodziej @2017
 		<a href="admin/index.php" class="btn btn-danger" role="button">Admin</a>
-</div>
+
 </body>
 </html>
