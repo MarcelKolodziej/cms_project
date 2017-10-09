@@ -28,7 +28,7 @@ define("TITLE", "Home Page");
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-4"><img src="img/logo.png"></div>
+		<div class="col-md-4"><img src="../img/logo.png"></div>
 		<div class="col-md-8"></div>
 	</div>
 	<div class="row">
@@ -124,9 +124,6 @@ define("TITLE", "Home Page");
 	</div>	
 </div><!-- main container -->
 
-<div class="container">
-		&copy; Marcel Kolodziej @2017
-		<a href="admin/index.php" class="btn btn-danger" role="button">Admin</a>
-
+<include 
 </body>
 </html>

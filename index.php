@@ -1,3 +1,12 @@
+<?php
+session_start();
+require('config/connect.php');
+
+if(!isset($_SESSION['email']) & empty($_SESSION['email'])){
+	header('location: login.php');
+}
+?>
+<?php require_once 'config/connect.php'; ?>
 <?php 
 define("TITLE", "Home Page");
 ?>
@@ -12,7 +21,7 @@ define("TITLE", "Home Page");
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Coustom CSS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,7 +37,7 @@ define("TITLE", "Home Page");
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-4"><img src="img/logo.png"></div>
+		<div class="col-md-4" id class="row"><img src="img/logo.png"></div>
 		<div class="col-md-8"></div>
 	</div>
 	<div class="row">

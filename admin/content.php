@@ -1,4 +1,3 @@
-<?php require '../config/connect.php'; ?>
 <?php include 'inc/header.php'; ?>
 <?php include 'inc/nav.php'; ?>
 
