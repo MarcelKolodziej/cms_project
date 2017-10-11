@@ -6,7 +6,6 @@ if(!isset($_SESSION['email']) & empty($_SESSION['email'])){
 	header('location: login.php');
 }
 ?>
-<?php require_once 'config/connect.php'; ?>
 <?php 
 define("TITLE", "Home Page");
 ?>
@@ -21,16 +20,22 @@ define("TITLE", "Home Page");
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Coustom CSS -->
-	<link rel="stylesheet" href="styles.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	body {background-color: lightgrey;}
+
+
+</style>
+
 
 </head>
 <body>

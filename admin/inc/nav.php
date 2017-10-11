@@ -6,7 +6,7 @@
 		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
 		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Content<span class="caret"></span></a>
+		          <a href="content.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Content<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="content.php">View Content</a></li>
 		            <li><a href="addcontent.php">Add Content</a></li>
@@ -23,7 +23,7 @@
 		      </ul>
 		       <ul class="nav navbar-nav navbar-right">
  					<li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php  $email ?><span class="caret"></span></a>
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Username<span class="caret"></span></a>
 			          <ul class="dropdown-menu">
 			            <li><a href="Logout.php">Logout</a></li>
         		  </ul>
