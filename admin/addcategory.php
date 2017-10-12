@@ -54,24 +54,25 @@ if(isset($_POST) & !empty($_POST)){
 		  </div>
 		</div>
 	</div>
-		
-		<div class="col-md-6">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<form method="post">
-						<div class="row">
-							<div class="col-md-6">
-							<?php if(isset($ssmsg)) { ?><div class="alert alert-succes" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
-							<?php if(isset($sfmsg)) { ?><div class="alert alert-danger" role="alert"> <?php echo $sfmsg; ?> </div><?php } ?>
-							<form class="form-horizontal" method="post" action="#">
-									<label> Select Main Category Name </label>
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		  	<form method="post">
+				<div class="row">
+					<div class="col-md-6">
+					<?php if(isset($ssmsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $ssmsg; ?> </div><?php } ?>
+					<?php if(isset($sfmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $sfmsg; ?> </div><?php } ?>
+					<form class="form-horizontal" method="post" action="#">
+						<label> Select Main Category Name </label>
+						<select name="maincat" class="form-control">
+							<?php 
+								$selsql = "SELECT * FROM category";
+								$selres = mysqli_query($connection, $selsql);
+								while($selr = mysqli_fetch_assoc($selres)){
+							?>
+						  <option value="<?php echo $selr['id']; ?>"><?php echo $selr['name']; ?></option>
+						  <?php } ?>
+						</select>
 						<br>
 						<label> Sub Category Name </label>
 						<input name="name" class="form-control" placeholder="Category Name" value="" type="text" required="">
@@ -80,13 +81,13 @@ if(isset($_POST) & !empty($_POST)){
 						<textarea name="description" class="form-control" rows="3"></textarea>
 						<br>
 						<input type="submit" value="Add Sub Category" class="btn btn-primary btn-lg">
-		                    </form>
-							</div>
-						</div>						
-					</form>	
+		            </form>
+					</div>
+				</div>						
+			</form>	
 				</div>
-			</div>
-		</div><!--md-6 -->
+		</div>
+	</div><!--md-6 -->
 </div><!-- main container -->
 <?php include 'inc/footer.php'; ?> 
 
